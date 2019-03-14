@@ -5,6 +5,7 @@ import CampaignList from "./campaigns/campaignList";
 import CampaignForm from "./campaigns/campaignForm";
 import CampaignEditForm from "./campaigns/campaignEditForm";
 import HomePage from "./homePage/homePage";
+import SelectedCampaign from "./campaigns/selectedCampaign";
 
 
 class ApplicationViews extends Component {
@@ -34,14 +35,14 @@ class ApplicationViews extends Component {
   };
   editCampaign = (campaign) => {
     return CampaignManager.updateCampaign(campaign).then(() => {
-        return CampaignManager.getAll()
+      return CampaignManager.getAll()
     }
     ).then(campaigns => this.setState(
-        {
-            campaigns: campaigns
-        }
+      {
+        campaigns: campaigns
+      }
     ))
-};
+  };
   addCampaign = campaign =>
     CampaignManager.addNewCampaign(campaign)
       .then(() => CampaignManager.getAll())
@@ -50,7 +51,7 @@ class ApplicationViews extends Component {
           campaigns: campaigns
         })
       );
-  updateCampaign = (editedCampaignObject) => {
+  updateEditedCampaign = (editedCampaignObject) => {
     return CampaignManager.updateCampaign(editedCampaignObject)
       .then(() => CampaignManager.getAll())
       .then(campaigns => {
@@ -76,17 +77,24 @@ class ApplicationViews extends Component {
           addCampaign={this.addCampaign}
         />
       }} />
-      <Route exact path="/campaigns/:campaignsId(\d+)/edit" render={props => {
+      <Route exact path="/campaigns/:campaignsId(\d+)/edit" render={(props) => {
         return <CampaignEditForm {...props}
-            updateCampaign={this.updateCampaign}
-            getCampampaign={this.get}
-            editCampaign={this.editCampaign}
-            campaigns={this.state.campaigns} />
-      }}/>
+          updateEditedCampaign={this.updateEditedCampaign}
+          getCampaign={this.get}
+          editCampaign={this.editCampaign}
+          campaigns={this.state.campaigns} />
+      }} />
       <Route exact path="/" render={(props) => {
         return <HomePage {...props}
         />
-      }}/>
+      }} />
+      <Route exact path="/campaigns/:campaignsId(\d+)/selectedCampaigns" render={(props) => {
+        return <SelectedCampaign
+          getCampaign={this.get}
+          campaign={this.state.campaigns}
+          {...props}
+        />
+      }} />
     </React.Fragment>
   }
 }

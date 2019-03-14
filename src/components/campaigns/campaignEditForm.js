@@ -18,11 +18,11 @@ export default class CampaignEditForm extends Component {
 
         const editedCampaign = {
             id: this.props.match.params.campaignsId,
-            name: this.state.campaignName,
-            story: this.state.campaignStory,
+            name: this.state.name,
+            story: this.state.story,
             userId: parseInt(sessionStorage.getItem("credentials"))
         };
-        this.props.updateCampaign(editedCampaign)
+        this.props.updateEditedCampaign(editedCampaign)
             .then(() => this.props.history.push("/campaigns"))
     }
 
@@ -33,7 +33,7 @@ export default class CampaignEditForm extends Component {
                     name: campaign.name,
                     story: campaign.story,
                     userId: campaign.userId,
-                    campaignId: campaign.id
+                    id: campaign.id
                 });
             });
     }

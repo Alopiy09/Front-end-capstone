@@ -19,9 +19,9 @@ class Nav extends Component {
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/campaigns">
-           Your Campaigns
+              Your Campaigns
             </Link>
-            </li>
+          </li>
         </ul>
         <a className="nav-link"> Welcome {this.props.activeUser.username}</a>
         <button

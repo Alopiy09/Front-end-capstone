@@ -1,0 +1,94 @@
+.campaignCard {
+    border: 3px solid black ;
+    width: 900px;
+    margin: 10px;
+}
+
+.buttonFlex {
+    display: flex;
+    justify-content: flex-end
+}
+
+.btn {
+    color: red;
+    border: 1px black solid;
+    background-color: rgb(247, 218, 218);
+}
+
+#allCampaigns {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#campaignPageStory {
+    border: 1px black solid;
+    padding: 10px;
+    overflow: auto;
+}
+
+#addCampaignForm {
+    border: 1px black solid;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+#lootTable {
+    display:flex;
+    overflow: auto;
+    align-self:center;
+    flex-direction: column
+}
+
+#campaignStory {
+    width: 300px;
+    height: 320px;
+}
+
+#loot {
+    width: 230px;
+    height: 100px;
+}
+
+#storyTable {
+    display: flex;
+    flex-direction: column;
+}
+
+#encounterTables {
+    align-self: center;
+    display: flex;
+    flex-direction: column
+}
+
+#encounters {
+    width: 230px;
+    height: 100px;
+}
+
+#mapTable {
+    border: 1px black solid;
+    height: 250px;
+    width: 250px;
+}
+
+#nonCampaignBoxes {
+    display: flex;
+}
+
+#campaignLoot {
+    border: 1px black solid;
+    width: 20px;
+    height: 20px;
+}
+
+#mapTableBox {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    width:250px;
+    margin-left: auto;
+}
+

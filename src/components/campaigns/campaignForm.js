@@ -27,54 +27,60 @@ export default class CampaignForm extends Component {
         return (
             <React.Fragment>
                 <form className="campaignForm">
-                <div id="addCampaignForm">
-                    <div className="campaignFormGroup">
-                        <label htmlFor="campaignName">Campaign Name:</label>
-                        <input
-                            type="text"
-                            required
-                            className="campaignFormControl"
-                            onChange={this.handleFieldChange}
-                            id="campaignName"
-                            placeholder="Campaign Name"
-                        />
-                    </div>
-                    <div className="campaignFormGroup">
-                        <label htmlFor="campaignStory">Campaign Story:</label>
-                        <input
-                            type="text"
-                            required
-                            className="campaignFormControl"
-                            onChange={this.handleFieldChange}
-                            id="campaignStory"
-                            placeholder="Campaign Story"
-                        />
-                    </div>
-                    <div className="campaignFormGroup">
-                        <label htmlFor="encounters">Encounters:</label>
-                        <input
-                            type="text"
-                            required
-                            className="campaignFormControl"
-                            onChange={this.handleFieldChange}
-                            id="encounters"
-                            placeholder="Encounters"
-                        />
-                    </div>
-                    <div className="campaignFormGroup" id="lootTable">
-                        <label htmlFor="items">Loot Table:</label>
-                        <textarea
-                            type="text"
-                            required
-                            className="campaignFormControl"
-                            onChange={this.handleFieldChange}
-                            id="loot"
-                            placeholder="Loot"
-                        />
-                    </div>
+                    <div id="addCampaignForm">
+                        <div className="campaignFormGroup">
+                            <label htmlFor="campaignName">Campaign Name:</label>
+                            <input
+                                type="text"
+                                required
+                                className="campaignFormControl"
+                                onChange={this.handleFieldChange}
+                                id="campaignName"
+                                placeholder="Campaign Name"
+                            />
+                        </div>
+                        <div id="mapTableBox">
+                        <dropdown></dropdown>
+                            <div id="mapTable"></div>
+                        </div>
+                        <div className="campaignFormGroup" id="storyTable">
+                            <label htmlFor="campaignStory">Campaign Story:</label>
+                            <textarea
+                                type="text"
+                                required
+                                className="campaignFormControl"
+                                onChange={this.handleFieldChange}
+                                id="campaignStory"
+                                placeholder="Campaign Story"
+                            />
+                        </div>
+                        <div id="nonCampaignBoxes">
+                            <div className="campaignFormGroup" id="encounterTables">
+                                <label htmlFor="encounters">Encounters:</label>
+                                <textarea
+                                    type="text"
+                                    required
+                                    className="campaignFormControl"
+                                    onChange={this.handleFieldChange}
+                                    id="encounters"
+                                    placeholder="Encounters"
+                                />
+                            </div>
+                            <div className="campaignFormGroup" id="lootTable">
+                                <label htmlFor="items">Loot Table:</label>
+                                <textarea
+                                    type="text"
+                                    required
+                                    className="campaignFormControl"
+                                    onChange={this.handleFieldChange}
+                                    id="loot"
+                                    placeholder="Loot"
+                                />
+                            </div>
+                        </div>
                     </div>
                     <button
-                       className="btn"
+                        className="btn"
                         type="submit"
                         onClick={this.constructNewCampaign}
                     >Submit</button>
