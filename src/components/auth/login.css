@@ -1,0 +1,29 @@
+.loginForm {
+    padding: 25px 25px;
+    border: 1px black solid;
+    width: 350px;
+}
+#username {
+    width: 180px;
+    height: 30px;
+}
+#password {
+    width: 180px;
+    height: 30px;
+}
+#button {
+    height: 30px;
+    width: 80px;
+}
+#moveTheBox {
+    display: flex;
+    justify-content: center;
+    padding-top: 140px
+}
+#mainPage {
+    background-color:lightgrey;
+}
+#buttonHolder {
+    display: flex;
+    justify-content: center
+}

@@ -1,0 +1,25 @@
+.boxen {
+    border: 1px black solid;
+    height: 300px;
+    width: 350px;
+}
+#box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boxen2 {
+    background-color: green;
+    margin-right: 30px;
+    width: 400px;
+}
+#boxen3 {
+    background-color: blue;
+    margin-left: 30px;
+    width: 400px;
+}
+#campaignBox {
+    display: flex;
+    margin: 40px;
+}
