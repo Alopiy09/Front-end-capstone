@@ -16,6 +16,8 @@
       "id": 1,
       "name": "aaa",
       "story": "asdfasdfasd",
+      "encounter": "something",
+      "loot": "gold",
       "userId": 3
     },
     {
@@ -34,6 +36,13 @@
       "name": "asdf",
       "story": "asdf",
       "id": 7
+    },
+    {
+      "name": "fad",
+      "story": "asdf",
+      "encounters": "",
+      "loot": "",
+      "id": 8
     }
   ],
   "items": [

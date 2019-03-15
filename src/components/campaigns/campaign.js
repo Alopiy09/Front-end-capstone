@@ -17,6 +17,8 @@ export default class CampaignCard extends Component {
                 this.setState({
                     name: campaign.name,
                     story: campaign.story,
+                    encounter: campaign.encounter,
+                    loot: campaign.loot,
                     userId: campaign.userId,
                     id: campaign.id
                 });

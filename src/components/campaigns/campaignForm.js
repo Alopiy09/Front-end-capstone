@@ -4,6 +4,8 @@ export default class CampaignForm extends Component {
     state = {
         campaignName: "",
         campaignStory: "",
+        campaignEncounters: "",
+        campaignLoot: "",
     };
     handleFieldChange = evt => {
         const stateToChange = {};
@@ -15,7 +17,9 @@ export default class CampaignForm extends Component {
         evt.preventDefault();
         const campaign = {
             name: this.state.campaignName,
-            story: this.state.campaignStory
+            story: this.state.campaignStory,
+            encounters: this.state.campaignEncounters,
+            loot: this.state.campaignLoot
         };
         this.props
             .addCampaign(campaign)
@@ -48,7 +52,7 @@ export default class CampaignForm extends Component {
                                 placeholder="Campaign Story"
                             />
                             <div className="campaignFormGroup" id="encounterTables">
-                                <label htmlFor="encounters">Encounters:</label>
+                                <label htmlFor="campaignEncounters">Encounters:</label>
                                 <textarea
                                     type="text"
                                     required
@@ -60,7 +64,7 @@ export default class CampaignForm extends Component {
                                 />
                             </div>
                             <div className="campaignFormGroup" id="lootTable">
-                                <label htmlFor="Loot">Loot Table:</label>
+                                <label htmlFor="campaignLoot">Loot Table:</label>
                                 <textarea
                                     type="text"
                                     required
