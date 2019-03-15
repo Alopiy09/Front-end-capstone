@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-
-
 export default class CampaignForm extends Component {
     state = {
         campaignName: "",
@@ -39,12 +37,8 @@ export default class CampaignForm extends Component {
                                 placeholder="Campaign Name"
                             />
                         </div>
-                        <div id="mapTableBox">
-                        <dropdown></dropdown>
-                            <div id="mapTable"></div>
-                        </div>
                         <div className="campaignFormGroup" id="storyTable">
-                            <label htmlFor="campaignStory">Campaign Story:</label>
+                            <label htmlFor="campaignStory"></label>
                             <textarea
                                 type="text"
                                 required
@@ -53,8 +47,6 @@ export default class CampaignForm extends Component {
                                 id="campaignStory"
                                 placeholder="Campaign Story"
                             />
-                        </div>
-                        <div id="nonCampaignBoxes">
                             <div className="campaignFormGroup" id="encounterTables">
                                 <label htmlFor="encounters">Encounters:</label>
                                 <textarea
@@ -64,10 +56,11 @@ export default class CampaignForm extends Component {
                                     onChange={this.handleFieldChange}
                                     id="encounters"
                                     placeholder="Encounters"
+                                    rows="11"
                                 />
                             </div>
                             <div className="campaignFormGroup" id="lootTable">
-                                <label htmlFor="items">Loot Table:</label>
+                                <label htmlFor="Loot">Loot Table:</label>
                                 <textarea
                                     type="text"
                                     required
@@ -75,15 +68,30 @@ export default class CampaignForm extends Component {
                                     onChange={this.handleFieldChange}
                                     id="loot"
                                     placeholder="Loot"
+                                    rows="11"
                                 />
                             </div>
                         </div>
-                    </div>
+                        <select id="mapSelector">
+                            <option value="map1">map1</option>
+                            <option value="map2">map2</option>
+                            <option value="map3">map3</option>
+                            <option value="map4">map4</option>
+                        </select>
+                        <div id="mapTableBox">
+                            <div id="mapTable"></div>
+                        </div>
+                        <div id="nonCampaignBoxes">
+                        </div>
+                        <div id="addCampaignButtonBox">
                     <button
+                        id="newCampaignSubmit"
                         className="btn"
                         type="submit"
                         onClick={this.constructNewCampaign}
                     >Submit</button>
+                    </div>
+                    </div>
                 </form>
             </React.Fragment>
         )

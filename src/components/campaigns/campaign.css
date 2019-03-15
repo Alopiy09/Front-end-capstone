@@ -48,12 +48,11 @@
 
 #loot {
     width: 230px;
-    height: 100px;
 }
 
 #storyTable {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 #encounterTables {
@@ -64,7 +63,6 @@
 
 #encounters {
     width: 230px;
-    height: 100px;
 }
 
 #mapTable {
@@ -77,18 +75,25 @@
     display: flex;
 }
 
-#campaignLoot {
-    border: 1px black solid;
-    width: 20px;
-    height: 20px;
-}
-
 #mapTableBox {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     flex-direction: column-reverse;
     width:250px;
-    margin-left: auto;
 }
+
+#mapSelector {
+    width: 200px;
+}
+
+#newCampaignSubmit{
+    width:90px;
+}
+
+#addCampaignButtonBox {
+    display: flex;
+    justify-content: flex-end;
+}
+
 

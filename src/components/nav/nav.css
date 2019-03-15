@@ -4,3 +4,6 @@
 .nav-link {
     color: red;
 }
+.nav-link:hover {
+    color:goldenrod;
+}

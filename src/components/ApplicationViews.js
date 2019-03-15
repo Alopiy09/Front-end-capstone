@@ -13,6 +13,7 @@ class ApplicationViews extends Component {
     campaigns: [],
     users: [],
   }
+
   componentDidMount() {
 
     CampaignManager.getAll().then(allCampaigns => {
@@ -21,6 +22,7 @@ class ApplicationViews extends Component {
       })
     })
   }
+
   deleteCampaign = id => {
     return fetch(`http://localhost:8000/campaigns/${id}`, {
       method: "DELETE"
@@ -33,6 +35,7 @@ class ApplicationViews extends Component {
       })
       )
   };
+
   editCampaign = (campaign) => {
     return CampaignManager.updateCampaign(campaign).then(() => {
       return CampaignManager.getAll()
@@ -43,6 +46,7 @@ class ApplicationViews extends Component {
       }
     ))
   };
+
   addCampaign = campaign =>
     CampaignManager.addNewCampaign(campaign)
       .then(() => CampaignManager.getAll())
@@ -51,6 +55,7 @@ class ApplicationViews extends Component {
           campaigns: campaigns
         })
       );
+
   updateEditedCampaign = (editedCampaignObject) => {
     return CampaignManager.updateCampaign(editedCampaignObject)
       .then(() => CampaignManager.getAll())
@@ -60,11 +65,13 @@ class ApplicationViews extends Component {
         })
       });
   };
+
   render() {
     console.log(this.props.activeUser)
     return <React.Fragment>
       <Route exact path="/campaigns" render={(props) => {
         return <CampaignList
+          getCampaign={this.get}
           deleteCampaign={this.deleteCampaign}
           users={this.state.users}
           campaigns={this.state.campaigns}
@@ -75,6 +82,7 @@ class ApplicationViews extends Component {
       <Route exact path="/campaigns/new" render={(props) => {
         return <CampaignForm {...props}
           addCampaign={this.addCampaign}
+          getCampaign={this.get}
         />
       }} />
       <Route exact path="/campaigns/:campaignsId(\d+)/edit" render={(props) => {
