@@ -96,7 +96,7 @@ class ApplicationViews extends Component {
         return <HomePage {...props}
         />
       }} />
-      <Route exact path="/campaigns/:campaignsId(\d+)/selectedCampaigns" render={(props) => {
+      <Route exact path="/campaigns/:campaignsId(\d+)/selectedCampaign" render={(props) => {
         return <SelectedCampaign
           getCampaign={this.get}
           campaign={this.state.campaigns}

@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import CampaignManager from "../../modules/CampaignManager";
-
+import "./campaignEditForm.css"
 export default class CampaignEditForm extends Component {
     state = {
         name: "",
@@ -20,6 +20,8 @@ export default class CampaignEditForm extends Component {
             id: this.props.match.params.campaignsId,
             name: this.state.name,
             story: this.state.story,
+            encounter: this.state.encounter,
+            loot: this.state.loot,
             userId: parseInt(sessionStorage.getItem("credentials"))
         };
         this.props.updateEditedCampaign(editedCampaign)
@@ -32,6 +34,8 @@ export default class CampaignEditForm extends Component {
                 this.setState({
                     name: campaign.name,
                     story: campaign.story,
+                    encounter: campaign.encounter,
+                    loot: campaign.loot,
                     userId: campaign.userId,
                     id: campaign.id
                 });
@@ -42,7 +46,7 @@ export default class CampaignEditForm extends Component {
             <React.Fragment>
                 <form className="eventForm">
                     <div className="formGroup">
-                        <label htmlFor="name">Campaign Name</label>
+                        <label htmlFor="name">Campaign Name:</label>
                         <input
                             type="text"
                             required
@@ -52,15 +56,39 @@ export default class CampaignEditForm extends Component {
                             value={this.state.name}
                         />
                     </div>
-                    <div className="formGroup">
-                        <label htmlFor="story">Campaign Story</label>
-                        <input
+                    <div className="formGroup" id="editCampaignStory">
+                        <label htmlFor="story">Campaign Story:</label>
+                        <textarea
+                            cols="50"
+                            rows="8"
                             type="text"
                             required
                             className="formControl"
                             onChange={this.handleFieldChange}
                             id="story"
                             value={this.state.story}
+                        />
+                    </div>
+                    <div className="formGroup" id="editCampaignEncounter">
+                        <label htmlFor="encounter">Campaign Encounters:</label>
+                        <textarea
+                            type="text"
+                            required
+                            className="formControl"
+                            onChange={this.handleFieldChange}
+                            id="encounter"
+                            value={this.state.encounter}
+                        />
+                    </div>
+                    <div className="formGroup" id="editCampaignLoot">
+                        <label htmlFor="loot">Campaign Loot:</label>
+                        <textarea
+                            type="text"
+                            required
+                            className="formControl"
+                            onChange={this.handleFieldChange}
+                            id="loot"
+                            value={this.state.loot}
                         />
                     </div>
                     <button

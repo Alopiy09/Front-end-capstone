@@ -1,0 +1,15 @@
+#editCampaignStory {
+    display: flex;
+}
+
+#story {
+    overflow: auto;
+}
+
+#editCampaignEncounter {
+    display: flex;
+}
+
+#editCampaignLoot {
+    display: flex;
+}

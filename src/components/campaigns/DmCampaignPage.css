@@ -1,23 +1,43 @@
 #DMpageCampaignStory {
     border: 1px black solid;
-    height: 100px;
-    width: 100px;
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    overflow: auto;
 }
 
 #DMpageCampaignName {
     border: 1px black solid;
-    height: 100px;
-    width: 100px;
+    height: 25px;
+    width: 150px;
+    background-color: white;
+
 }
 
 #DMpageCampaignEncounters {
     border: 1px black solid;
-    height: 100px;
-    width: 100px;
+    height: 400px;
+    width: 230px;
+    background-color: white;
+    overflow: auto;
 }
 
 #DMpageCampaignLoot {
     border: 1px black solid;
-    height: 100px;
-    width: 100px;
+    height: 400px;
+    width: 230px;
+    background-color: white;
+    overflow:auto;
+}
+
+#DMcampaignPage {
+    display:flex;
+}
+
+#initiativeTracker {
+    border: 1px solid black;
+    width: 116px;
+    height: 500px;
+    margin-left: 15px;
+    background-color: white;
 }

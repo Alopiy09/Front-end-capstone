@@ -23,18 +23,18 @@ export default class CampaignCard extends Component {
                     id: campaign.id
                 });
             });
-        }
+    }
 
     render() {
         return (
             <div key={this.props.campaign.id} className="campaignCard">
                 <div className="campaignCardBody">
                     Campaign Name:<Link
-                    onClick={() => {
-                        this.props.history.CampaignManager.get(this.id)
-                    }}
-                    className="campaignLink"
-                    to={`/campaigns/${this.props.campaign.id}/selectedCampaigns`}> {this.props.campaign.name} </Link>  <br />
+                        onClick={() => {
+                            this.props.history.CampaignManager.get(this.id)
+                        }}
+                        className="campaignLink"
+                        to={`/campaigns/${this.props.campaign.id}/selectedCampaign`}> {this.props.campaign.name} </Link>  <br />
                 </div>
                 <div className="buttonFlex">
                     <button

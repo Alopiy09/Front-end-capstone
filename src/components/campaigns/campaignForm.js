@@ -4,7 +4,7 @@ export default class CampaignForm extends Component {
     state = {
         campaignName: "",
         campaignStory: "",
-        campaignEncounters: "",
+        campaignEncounter: "",
         campaignLoot: "",
     };
     handleFieldChange = evt => {
@@ -18,7 +18,7 @@ export default class CampaignForm extends Component {
         const campaign = {
             name: this.state.campaignName,
             story: this.state.campaignStory,
-            encounters: this.state.campaignEncounters,
+            encounters: this.state.campaignEncounter,
             loot: this.state.campaignLoot
         };
         this.props
@@ -52,13 +52,13 @@ export default class CampaignForm extends Component {
                                 placeholder="Campaign Story"
                             />
                             <div className="campaignFormGroup" id="encounterTables">
-                                <label htmlFor="campaignEncounters">Encounters:</label>
+                                <label htmlFor="campaignEncounter">Encounters:</label>
                                 <textarea
                                     type="text"
                                     required
                                     className="campaignFormControl"
                                     onChange={this.handleFieldChange}
-                                    id="encounters"
+                                    id="campaignEncounter"
                                     placeholder="Encounters"
                                     rows="11"
                                 />
@@ -70,7 +70,7 @@ export default class CampaignForm extends Component {
                                     required
                                     className="campaignFormControl"
                                     onChange={this.handleFieldChange}
-                                    id="loot"
+                                    id="campaignLoot"
                                     placeholder="Loot"
                                     rows="11"
                                 />
@@ -85,16 +85,14 @@ export default class CampaignForm extends Component {
                         <div id="mapTableBox">
                             <div id="mapTable"></div>
                         </div>
-                        <div id="nonCampaignBoxes">
-                        </div>
                         <div id="addCampaignButtonBox">
-                    <button
-                        id="newCampaignSubmit"
-                        className="btn"
-                        type="submit"
-                        onClick={this.constructNewCampaign}
-                    >Submit</button>
-                    </div>
+                            <button
+                                id="newCampaignSubmit"
+                                className="btn"
+                                type="submit"
+                                onClick={this.constructNewCampaign}
+                            >Submit</button>
+                        </div>
                     </div>
                 </form>
             </React.Fragment>
