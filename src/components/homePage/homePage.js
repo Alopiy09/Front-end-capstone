@@ -3,6 +3,8 @@ import "./homePage.css"
 import ReactPlayer from "react-player"
 
 export default class HomePage extends Component {
+
+
     render() {
         return (
             <div id="box">

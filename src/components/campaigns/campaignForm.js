@@ -18,7 +18,8 @@ export default class CampaignForm extends Component {
         const campaign = {
             name: this.state.campaignName,
             story: this.state.campaignStory,
-            encounters: this.state.campaignEncounter,
+            encounter: this.state.campaignEncounter,
+            userId: parseInt(sessionStorage.getItem("credentials")),
             loot: this.state.campaignLoot
         };
         this.props

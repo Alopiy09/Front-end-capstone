@@ -13,3 +13,9 @@
 #editCampaignLoot {
     display: flex;
 }
+
+
+.eventForm {
+    display:flex;
+    flex-direction: column;
+}

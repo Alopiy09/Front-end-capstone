@@ -4,6 +4,7 @@ import "./DmCampaignPage.css"
 export default class SelectedCampaign extends Component {
 
     render() {
+        console.log(this.props.activeUser)
         const campaign = this.props.campaign.find(a =>
             a.id === parseInt(this.props.match.params.campaignsId))
             || { id: 404, name: "404", story: "Campaign not found" }

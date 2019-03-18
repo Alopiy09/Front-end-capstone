@@ -9,6 +9,11 @@
       "username": "JacobSanders",
       "password": "aaa",
       "id": 3
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "id": 4
     }
   ],
   "Campaigns": [
@@ -35,6 +40,14 @@
       "encounter": "Encounters",
       "loot": "Loot",
       "userId": 3
+    },
+    {
+      "name": "test",
+      "story": "story",
+      "encounter": "encounter",
+      "userId": 4,
+      "loot": "loot",
+      "id": 4
     }
   ],
   "items": [

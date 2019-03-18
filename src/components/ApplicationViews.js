@@ -6,12 +6,11 @@ import CampaignForm from "./campaigns/campaignForm";
 import CampaignEditForm from "./campaigns/campaignEditForm";
 import HomePage from "./homePage/homePage";
 import SelectedCampaign from "./campaigns/selectedCampaign";
-
+import AllCampaignList from "./campaigns/allCampaignList";
 
 class ApplicationViews extends Component {
   state = {
     campaigns: [],
-    users: [],
   }
 
   componentDidMount() {
@@ -71,9 +70,18 @@ class ApplicationViews extends Component {
     return <React.Fragment>
       <Route exact path="/campaigns" render={(props) => {
         return <CampaignList
+          activeUser={this.activeUser}
           getCampaign={this.get}
           deleteCampaign={this.deleteCampaign}
-          users={this.state.users}
+          campaigns={this.state.campaigns}
+          {...props}
+        />
+      }}
+      />
+      <Route exact path="/allCampaigns" render={(props) => {
+        return <AllCampaignList
+          activeUser={this.activeUser}
+          getCampaign={this.get}
           campaigns={this.state.campaigns}
           {...props}
         />

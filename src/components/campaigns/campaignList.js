@@ -17,12 +17,13 @@ export default class CampaignList extends Component {
                 <h1>Campaigns</h1>
                 <section id="allCampaigns">
                     {
-                        this.props.campaigns.map(campaign =>
-                            <CampaignCard key={campaign.id}
-                                campaign={campaign}
-                                user={this.props.users}
-                                {...this.props} />
-                        )
+                        this.props.campaigns.filter(currentCampaign => currentCampaign.userId === parseInt(sessionStorage.getItem("credentials")))
+                            .map(campaign =>
+                                <CampaignCard key={campaign.id}
+                                    campaign={campaign}
+                                    user={this.props.users}
+                                    {...this.props} />
+                            )
                     }
                 </section>
             </React.Fragment>
