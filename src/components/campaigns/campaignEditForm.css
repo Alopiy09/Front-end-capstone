@@ -8,14 +8,34 @@
 
 #editCampaignEncounter {
     display: flex;
+    flex-direction: column;
+    margin-left: 5px;
 }
 
 #editCampaignLoot {
     display: flex;
+    flex-direction: column;
+    margin-left: 5px;
 }
 
+#editCampaignButton {
+    width: 140px;
+}
 
 .eventForm {
     display:flex;
     flex-direction: column;
+}
+
+.eventForm {
+    border: 1px solid black;
+}
+
+#editButtonBox {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#rowOfBoxes {
+    display:flex;
 }

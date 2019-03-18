@@ -30,6 +30,7 @@ export default class CampaignCard extends Component {
             <div key={this.props.campaign.id} className="campaignCard">
                 <div className="campaignCardBody">
                     Campaign Name:<Link
+                    id="campaignLink"
                         onClick={() => {
                             this.props.history.CampaignManager.get(this.id)
                         }}

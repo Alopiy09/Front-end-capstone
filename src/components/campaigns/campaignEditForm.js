@@ -45,7 +45,7 @@ export default class CampaignEditForm extends Component {
         return (
             <React.Fragment>
                 <form className="eventForm">
-                    <div className="formGroup">
+                    <div className="formGroup" id="editCampaignName">
                         <label htmlFor="name">Campaign Name:</label>
                         <input
                             type="text"
@@ -56,11 +56,12 @@ export default class CampaignEditForm extends Component {
                             value={this.state.name}
                         />
                     </div>
+                    <div id="rowOfBoxes">
                     <div className="formGroup" id="editCampaignStory">
-                        <label htmlFor="story">Campaign Story:</label>
+                        <label htmlFor="story">Story:</label>
                         <textarea
-                            cols="50"
-                            rows="8"
+                            cols="45"
+                            rows="10"
                             type="text"
                             required
                             className="formControl"
@@ -70,9 +71,11 @@ export default class CampaignEditForm extends Component {
                         />
                     </div>
                     <div className="formGroup" id="editCampaignEncounter">
-                        <label htmlFor="encounter">Campaign Encounters:</label>
+                        <label htmlFor="encounter">Encounters:</label>
                         <textarea
                             type="text"
+                            cols="30"
+                            rows="10"
                             required
                             className="formControl"
                             onChange={this.handleFieldChange}
@@ -81,9 +84,11 @@ export default class CampaignEditForm extends Component {
                         />
                     </div>
                     <div className="formGroup" id="editCampaignLoot">
-                        <label htmlFor="loot">Campaign Loot:</label>
+                        <label htmlFor="loot">Loot:</label>
                         <textarea
                             type="text"
+                            cols="30"
+                            rows="10"
                             required
                             className="formControl"
                             onChange={this.handleFieldChange}
@@ -91,13 +96,17 @@ export default class CampaignEditForm extends Component {
                             value={this.state.loot}
                         />
                     </div>
+                    </div>
+                    <div id="editButtonBox">
                     <button
                         type="submit"
                         onClick={this.updateExistingCampaign}
                         className="btn btn-primary"
+                        id="editCampaignButton"
                     >
-                        Save Campaign
+                        Edit Campaign
                     </button>
+                    </div>
                 </form>
             </React.Fragment>
         )
