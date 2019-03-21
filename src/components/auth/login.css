@@ -27,3 +27,23 @@
     display: flex;
     justify-content: center
 }
+
+#loginPageTitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 75px;
+}
+
+#passwordTitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 5px;
+}
+
+#usernameTitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btn {
+    color: red;
+    border: 1px black solid;
+    background-color: rgb(247, 218, 218);
+}

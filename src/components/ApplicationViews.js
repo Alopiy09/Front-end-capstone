@@ -11,6 +11,7 @@ import AllCampaignList from "./campaigns/allCampaignList";
 class ApplicationViews extends Component {
   state = {
     campaigns: [],
+    encounters: [],
   }
 
   componentDidMount() {
@@ -21,6 +22,8 @@ class ApplicationViews extends Component {
       })
     })
   }
+
+
 
   deleteCampaign = id => {
     return fetch(`http://localhost:8000/campaigns/${id}`, {

@@ -14,7 +14,7 @@ export default class CampaignList extends Component {
                         Create New Campaign
                 </button>
                 </div>
-                <h1>Campaigns</h1>
+                <h1 id="campaignPageTitle">Campaigns</h1>
                 <section id="allCampaigns">
                     {
                         this.props.campaigns.filter(currentCampaign => currentCampaign.userId === parseInt(sessionStorage.getItem("credentials")))

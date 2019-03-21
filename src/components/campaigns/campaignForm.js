@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import EncounterSearch from "./encounterSearch";
+
 
 export default class CampaignForm extends Component {
     state = {
@@ -32,7 +34,7 @@ export default class CampaignForm extends Component {
                 <form className="campaignForm">
                     <div id="addCampaignForm">
                         <div className="campaignFormGroup">
-                            <label htmlFor="campaignName">Campaign Name:</label>
+                            <label htmlFor="campaignName" id="addCampaignPageName">Campaign Name:</label>
                             <input
                                 type="text"
                                 required
@@ -52,9 +54,22 @@ export default class CampaignForm extends Component {
                                 id="campaignStory"
                                 placeholder="Campaign Story"
                             />
+                            <div>
+                            <select id="mapSelector">
+                            <option value="map1">map1</option>
+                            <option value="map2">map2</option>
+                            <option value="map3">map3</option>
+                            <option value="map4">map4</option>
+                        </select>
+                        <div id="mapTableBox">
+                            <div id="mapTable"></div>
+                        </div>
+                        </div>
+                            <div id="encounterTableSearch">
                             <div className="campaignFormGroup" id="encounterTables">
                                 <label htmlFor="campaignEncounter">Encounters:</label>
                                 <textarea
+                                    cols="30"
                                     type="text"
                                     required
                                     className="campaignFormControl"
@@ -64,9 +79,24 @@ export default class CampaignForm extends Component {
                                     rows="11"
                                 />
                             </div>
+                            {/* encounter search */}
+                            <EncounterSearch  />
+                            <textarea
+                                    cols="30"
+                                    type="text"
+                                    required
+                                    className="campaignFormControl"
+                                    onChange={this.handleFieldChange}
+                                    id="campaignEncounter"
+                                    placeholder="Encounters"
+                                    rows="11"
+                                />
+                            </div>
+                            <div id="lootTableSearch">
                             <div className="campaignFormGroup" id="lootTable">
                                 <label htmlFor="campaignLoot">Loot Table:</label>
                                 <textarea
+                                    cols="30"
                                     type="text"
                                     required
                                     className="campaignFormControl"
@@ -76,15 +106,30 @@ export default class CampaignForm extends Component {
                                     rows="11"
                                 />
                             </div>
-                        </div>
-                        <select id="mapSelector">
-                            <option value="map1">map1</option>
-                            <option value="map2">map2</option>
-                            <option value="map3">map3</option>
-                            <option value="map4">map4</option>
-                        </select>
-                        <div id="mapTableBox">
-                            <div id="mapTable"></div>
+                            <div className="campaignFormGroup" id="lootTable">
+                                <input
+                                    cols="30"
+                                    type="text"
+                                    required
+                                    className="campaignFormControl"
+                                    onChange={this.handleFieldChange}
+                                    id="campaignLootSearch"
+                                    placeholder="Loot"
+                                    rows="11"
+                                />
+                            </div>
+                            <button className="btn" id="lootSearchButton">Search</button>
+                            <textarea
+                                    cols="30"
+                                    type="text"
+                                    required
+                                    className="campaignFormControl"
+                                    onChange={this.handleFieldChange}
+                                    id="campaignLoot"
+                                    placeholder="Loot"
+                                    rows="11"
+                                />
+                            </div>
                         </div>
                         <div id="addCampaignButtonBox">
                             <button

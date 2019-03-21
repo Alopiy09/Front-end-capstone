@@ -1,8 +1,9 @@
 .navbar {
-    background-color: #ffffff;
+    background-color: darkgrey;
 }
 .nav-link {
     color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .nav-link:hover {
     color:goldenrod;

@@ -7,7 +7,7 @@ export default class AllCampaignList extends Component {
     render() {
         return (
             <React.Fragment>
-                <h1>All Campaigns</h1>
+                <h1 id="allCampaigns">All Campaigns</h1>
                 <section id="allCampaigns">
                     {
                         this.props.campaigns.map(campaign =>

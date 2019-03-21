@@ -14,11 +14,15 @@
     border: 1px black solid;
     background-color: rgb(247, 218, 218);
 }
+.btn:hover {
+    color: black;
+    background-color: goldenrod;
+}
 
 #allCampaigns {
     display: flex;
     flex-direction: column;
-
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #campaignPageStory {
@@ -35,14 +39,17 @@
 }
 
 #lootTable {
+    margin-top: 12px;
     display:flex;
     overflow: auto;
     align-self:center;
-    flex-direction: column
+    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #campaignStory {
-    width: 300px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 600px;
     height: 320px;
 }
 
@@ -56,13 +63,15 @@
 }
 
 #encounterTables {
+    margin-top: 12px;
     align-self: center;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #encounters {
-    width: 230px;
+    width: 30px;
 }
 
 #mapTable {
@@ -81,10 +90,13 @@
     justify-content: flex-end;
     flex-direction: column-reverse;
     width:250px;
+    margin-left: 5px;
 }
 
 #mapSelector {
     width: 200px;
+    height: 30px;
+    margin-left: 5px;
 }
 
 #newCampaignSubmit{
@@ -111,3 +123,51 @@
     color: goldenrod;
 }
 
+#campaignEncounter {
+    margin-left: 5px;
+}
+
+#campaignLoot {
+    margin-left: 5px;
+}
+
+#campaignPageTitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#lootTableSearch {
+    display: flex;
+    flex-direction: column;
+}
+
+#encounterTableSearch {
+    display: flex;
+    flex-direction: column;
+}
+
+#campaignEncounterSearch {
+    width: 230px;
+    margin-right: 23px;
+}
+
+#campaignLootSearch {
+    width: 230px;
+    margin-right: 23px;
+}
+
+#lootSearchButton {
+    width: 100px;
+    margin-left: 7px;
+}
+
+#encounterSearchButton {
+    width: 100px;
+}
+
+#allCampaigns {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#addCampaignPageName {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

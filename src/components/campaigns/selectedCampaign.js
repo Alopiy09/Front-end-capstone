@@ -13,9 +13,9 @@ export default class SelectedCampaign extends Component {
                 <div key={campaign.id}>
                     <div id="DMpageCampaignName">{campaign.name}</div>
                     <div id="DMcampaignPage">
-                        <div id="DMpageCampaignStory">{campaign.story}</div>
-                        <div id="DMpageCampaignEncounters">{campaign.encounter}</div>
-                        <div id="DMpageCampaignLoot">{campaign.loot}</div>
+                        <textarea id="DMpageCampaignStory">{campaign.story}</textarea>
+                        <textarea id="DMpageCampaignEncounters">{campaign.encounter}</textarea>
+                        <textarea id="DMpageCampaignLoot">{campaign.loot}</textarea>
                         <div id="initiativeTracker"></div>
                     </div>
                 </div>

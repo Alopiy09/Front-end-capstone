@@ -1,7 +1,7 @@
 #DMpageCampaignStory {
     border: 1px black solid;
     height: 400px;
-    width: 400px;
+    width: 800px;
     background-color: white;
     overflow: auto;
 }
@@ -10,7 +10,7 @@
     border: 1px black solid;
     height: 25px;
     width: 150px;
-    background-color: white;
+    margin-left: 10px;
 
 }
 
@@ -20,6 +20,7 @@
     width: 230px;
     background-color: white;
     overflow: auto;
+    margin-left: 5px;
 }
 
 #DMpageCampaignLoot {
@@ -28,6 +29,7 @@
     width: 230px;
     background-color: white;
     overflow:auto;
+    margin-left: 5px;
 }
 
 #DMcampaignPage {
